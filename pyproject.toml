@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "local-library-website"
+version = "0.1.0"
+description = "For Django Tutorial: The Local Library website"
+authors = ["hong <j50508@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "local_library_website"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+django = "^4.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
