@@ -9,6 +9,14 @@ class Genre(models.Model):
         """String for representing the Model object."""
         return self.name
 
+class Language(models.Model):
+    """Model representing a book genre."""
+    name = models.CharField(max_length=200, help_text='Enter a book language (e.g. English/Chinese/Japanense/Korean)')
+
+    def __str__(self):
+        """String for representing the Model object."""
+        return self.name
+
 from django.urls import reverse # Used to generate URLs by reversing the URL patterns
 
 class Book(models.Model):
