@@ -2,8 +2,10 @@
 
 ## What to do?
 
-~~* [Tutorial_local_library_website](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)~~
-* [skeleton_website](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website)
+~~* [Django Tutorial: The Local Library website](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)~~
+~~* [Django Tutorial Part 2: Creating a skeleton website](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website)~~
+~~* [Django Tutorial Part 3: Using models](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models)~~
+* [Django Tutorial Part 4: Django admin site](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site)
 
 ## hints
 
