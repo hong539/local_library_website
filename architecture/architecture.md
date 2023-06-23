@@ -18,7 +18,7 @@
 
 ```shell
 #for help
-python3 manage.py --help
+python3 manage.py help
 
 #run devserver
 python3 manage.py runserver
