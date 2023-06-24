@@ -25,6 +25,8 @@ class Book(models.Model):
 
     # Foreign Key used because book can only have one author, but authors can have multiple books
     # This is not a good idea. Because some books have dual or triple authors.
+    # e.g. Computer Systems: A Programmer's Perspective, 3/E (CS:APP3e)
+    # Randal E. Bryant and David R. O'Hallaron, Carnegie Mellon University
     # Author is a string rather than an object because it hasn't been declared yet in the file
     author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
 
