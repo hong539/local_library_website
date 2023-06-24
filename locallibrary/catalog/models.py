@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse # Used to generate URLs by reversing the URL patterns
+import uuid # Required for unique book instances
 
 # Create your models here.
 class Genre(models.Model):
@@ -17,13 +19,12 @@ class Language(models.Model):
         """String for representing the Model object."""
         return self.name
 
-from django.urls import reverse # Used to generate URLs by reversing the URL patterns
-
 class Book(models.Model):
     """Model representing a book (but not a specific copy of a book)."""
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, help_text='Enter a book title (e.g. The Linux Programming Interface)')
 
     # Foreign Key used because book can only have one author, but authors can have multiple books
+    # This is not a good idea. Because some books have dual or triple authors.
     # Author is a string rather than an object because it hasn't been declared yet in the file
     author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
 
@@ -48,8 +49,6 @@ class Book(models.Model):
         return ', '.join(genre.name for genre in self.genre.all()[:3])
 
     display_genre.short_description = 'Genre'
-
-import uuid # Required for unique book instances
 
 class BookInstance(models.Model):
     """Model representing a specific copy of a book (i.e. that can be borrowed from the library)."""
