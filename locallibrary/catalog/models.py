@@ -28,7 +28,7 @@ class Book(models.Model):
     # e.g. Computer Systems: A Programmer's Perspective, 3/E (CS:APP3e)
     # Randal E. Bryant and David R. O'Hallaron, Carnegie Mellon University
     # Author is a string rather than an object because it hasn't been declared yet in the file
-    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True, help_text='Enter one author for this book. If dual/triple or more authors is not wokring')
 
     summary = models.TextField(max_length=1000, help_text='Enter a brief description of the book')
     isbn = models.CharField('ISBN', max_length=13, unique=True,
