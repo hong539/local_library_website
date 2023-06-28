@@ -1,6 +1,6 @@
 # local_library_website
 
-For Django Tutorial: The Local Library website
+For Doing Django Tutorial: The Local Library website steps by steps
 
 ## hints
 
