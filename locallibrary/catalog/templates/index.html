@@ -1,10 +1,10 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Local Library Home</h1>
+  <h1>Hong's Local Library Home</h1>
   <p>
     Welcome to LocalLibrary, a website developed by
-    <em>Mozilla Developer Network</em>!
+    <em>A man who want to extends his skill with Python and Django framework!</em>!
   </p>
   <h2>Dynamic content</h2>
   <p>The library has the following record counts:</p>
@@ -13,5 +13,6 @@
     <li><strong>Copies:</strong> {{ num_instances }}</li>
     <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
     <li><strong>Authors:</strong> {{ num_authors }}</li>
+    <li><strong>Genres:</strong> {{ genres }}</li>
   </ul>
 {% endblock %}
