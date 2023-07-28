@@ -2,7 +2,13 @@
 
 For Doing Django Tutorial: The Local Library website steps by steps
 
-## hints
+## to-do
+
+* fix dependency error : django.db.utils.OperationalError: no such table: catalog_book
+
+## quick start
+
+* [pyenv+poetry](https://github.com/hong539/setup_dev_environment/blob/main/programing_languages/python/python.md)
 
 ```shell
 #for help
