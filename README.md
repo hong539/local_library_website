@@ -8,6 +8,7 @@ For Doing Django Tutorial: The Local Library website steps by steps
 * [pyenv+poetry](https://github.com/hong539/setup_dev_environment/blob/main/programing_languages/python/python.md)
 * Project dependcy detialls will be in pyproject.toml/poetry.lock
 * PostgreSQL or builtin SQLite
+    * [PostgreSQL via docker container](https://github.com/docker-library/docs/blob/master/postgres/README.md)
     * [install PostgreSQL on Arch Linux](https://wiki.archlinux.org/title/PostgreSQL)
     * [PostgreSQL/Chapter 19. Server Setup and Operation](https://www.postgresql.org/docs/15/runtime.html)
     * [PostgreSQL/app-createuser](https://www.postgresql.org/docs/current/app-createuser.html)
