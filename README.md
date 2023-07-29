@@ -6,11 +6,40 @@ For Doing Django Tutorial: The Local Library website steps by steps
 
 * Python == 3.8.16
 * [pyenv+poetry](https://github.com/hong539/setup_dev_environment/blob/main/programing_languages/python/python.md)
+* Project dependcy detialls will be in pyproject.toml/poetry.lock
 * PostgreSQL or builtin SQLite
+    * [install PostgreSQL on Arch Linux](https://wiki.archlinux.org/title/PostgreSQL)
+    * [PostgreSQL/Chapter 19. Server Setup and Operation](https://www.postgresql.org/docs/15/runtime.html)
+    * [PostgreSQL/app-createuser](https://www.postgresql.org/docs/current/app-createuser.html)
+    * [Django/PostgreSQL connection settings](https://docs.djangoproject.com/en/4.2/ref/databases/)
 
-## to-do
+```shell
+#install postgresql via pacman
+sudo pacman -S postgresql
 
-* ~~fix dependency error : django.db.utils.OperationalError: no such table: catalog_book~~
+#change user to postgres for setting up PostgreSQL on Arch Linux
+sudo -iu postgres
+
+#check encoding
+[postgres]$ echo $LANG
+[postgres]$ locale -a
+
+#init data
+[postgres]$ initdb -D /var/lib/postgres/data
+
+#start your PostgreSQL server
+sudo systemctl status postgresql.service
+sudo systemctl start postgresql.service
+
+#Create your first database/user
+[postgres]$ createuser --interactive
+#Which user to use createdb myDatabaseName?
+createdb local_library
+```
+
+## to-do-list
+
+* ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
     * [reinstall-the-db-sqlite3-file-in-django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
 * change to another separate DB such as PostgreSQL
     * [postgresql-notes](https://docs.djangoproject.com/en/4.2/ref/databases/#postgresql-notes)
