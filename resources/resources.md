@@ -1,4 +1,4 @@
-# architecture
+# resources
 
 ## What to do?
 
