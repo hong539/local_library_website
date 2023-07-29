@@ -12,6 +12,7 @@ For Doing Django Tutorial: The Local Library website steps by steps
     * [PostgreSQL/Chapter 19. Server Setup and Operation](https://www.postgresql.org/docs/15/runtime.html)
     * [PostgreSQL/app-createuser](https://www.postgresql.org/docs/current/app-createuser.html)
     * [Django/PostgreSQL connection settings](https://docs.djangoproject.com/en/4.2/ref/databases/)
+    * [PostgreSQL/auth-pg-hba-conf](https://www.postgresql.org/docs/15/auth-pg-hba-conf.html)
 
 ```shell
 #install postgresql via pacman
