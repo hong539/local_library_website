@@ -27,14 +27,25 @@ sudo -iu postgres
 #init data
 [postgres]$ initdb -D /var/lib/postgres/data
 
-#start your PostgreSQL server
+#status your PostgreSQL server
 sudo systemctl status postgresql.service
+#start your PostgreSQL server
 sudo systemctl start postgresql.service
+#stop your PostgreSQL server
+sudo systemctl stop postgresql.service
 
 #Create your first database/user
 [postgres]$ createuser --interactive
 #Which user to use createdb myDatabaseName?
 createdb local_library
+
+#test db
+psql local_library
+
+#Configure PostgreSQL server
+sudo vim /var/lib/postgres/data/postgresql.conf
+sudo vim /var/lib/postgres/data/pg_hba.conf
+sudo systemctl restart postgresql.service
 ```
 
 ## to-do-list
@@ -42,6 +53,7 @@ createdb local_library
 * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
     * [reinstall-the-db-sqlite3-file-in-django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
 * change to another separate DB such as PostgreSQL
+    * FATAL:  password authentication failed for user
     * [postgresql-notes](https://docs.djangoproject.com/en/4.2/ref/databases/#postgresql-notes)
     * [QuerySet API](https://docs.djangoproject.com/en/4.2/ref/models/querysets/)
     * [libpq](https://www.postgresql.org/docs/current/libpq.html)
