@@ -10,7 +10,9 @@ For Doing Django Tutorial: The Local Library website steps by steps
 
 ## to-do
 
-* fix dependency error : django.db.utils.OperationalError: no such table: catalog_book
+* ~~fix dependency error : django.db.utils.OperationalError: no such table: catalog_book~~
+    * [reinstall-the-db-sqlite3-file-in-django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
+* change to another separate DB such as PostgreSQL
 
 ## quick start
 
@@ -19,6 +21,9 @@ For Doing Django Tutorial: The Local Library website steps by steps
 
 #for help
 python3 manage.py help
+
+#Creating a superuser for Django CMS system
+python3 manage.py createsuperuser
 
 #run devserver
 python3 manage.py runserver
