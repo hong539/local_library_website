@@ -28,10 +28,13 @@ For Doing Django Tutorial: The Local Library website steps by steps
 * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
     * [reinstall-the-db-sqlite3-file-in-django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
 * change to another separate DB such as PostgreSQL
+    * django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module
     * How to import file db.sqlite3 to Postgresql?
     * could not save history to file "/var/lib/postgres/.psql_history": No such file or directory
     * ~~FATAL:  password authentication failed for user~~
         * add password for user via commands
+    * [psycopg3: an engine for postgresql](https://www.psycopg.org/psycopg3/docs/basic/install.html#supported-systems)
+    * [SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.](https://www.sqlalchemy.org/)
     * [postgresql-notes](https://docs.djangoproject.com/en/4.2/ref/databases/#postgresql-notes)
     * [QuerySet API](https://docs.djangoproject.com/en/4.2/ref/models/querysets/)
     * [libpq](https://www.postgresql.org/docs/current/libpq.html)
