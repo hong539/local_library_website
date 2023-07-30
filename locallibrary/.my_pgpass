@@ -1,1 +1,1 @@
-localhost:5432:NAME:USER:PASSWORD
+localhost:5432:local_library:worker:justfortest0731
