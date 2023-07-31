@@ -41,6 +41,7 @@ psql local_library
 
 #Configure PostgreSQL server
 sudo vim /var/lib/postgres/data/postgresql.conf
+#Client authentication
 sudo vim /var/lib/postgres/data/pg_hba.conf
 sudo systemctl restart postgresql.service
 
