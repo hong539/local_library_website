@@ -28,9 +28,14 @@ For Doing Django Tutorial: The Local Library website steps by steps
 * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
     * [reinstall-the-db-sqlite3-file-in-django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
 * change to another separate DB such as PostgreSQL
-    * django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module
+    * django.db.utils.OperationalError: connection is bad: definition of service "my_service" not found
+    * ~~django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module~~
+        ```shell
+        poetry add "psycopg[binary,pool]"
+        ```
     * How to import file db.sqlite3 to Postgresql?
-    * could not save history to file "/var/lib/postgres/.psql_history": No such file or directory
+    * ~~could not save history to file "/var/lib/postgres/.psql_history": No such file or directory~~
+        * touch file and chown user/usergroup
     * ~~FATAL:  password authentication failed for user~~
         * add password for user via commands
     * [psycopg3: an engine for postgresql](https://www.psycopg.org/psycopg3/docs/basic/install.html#supported-systems)
@@ -56,4 +61,7 @@ python3 manage.py runserver
 #Warning: You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
 python3 manage.py makemigrations
 python3 manage.py migrate
+
+#add packages by poetry
+poetry add "psycopg[binary,pool]"
 ```
