@@ -162,3 +162,6 @@ cython_debug/
 #ignore personal PostgreSQL login info
 /locallibrary/.my_pgpass_dev
 /locallibrary/.pg_service.conf_dev
+
+#ignore personal Django CMS login info
+/locallibrary/.my_cms_dev
