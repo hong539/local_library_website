@@ -1,6 +1,6 @@
 # resources
 
-## install PostgreSQL on Arch Linux
+## install/configure PostgreSQL on Arch Linux
 
 * [PostgreSQL via docker container](https://github.com/docker-library/docs/blob/master/postgres/README.md)
 * [install PostgreSQL on Arch Linux](https://wiki.archlinux.org/title/PostgreSQL)
