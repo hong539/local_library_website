@@ -11,11 +11,11 @@ For Doing Django Tutorial: The Local Library website steps by steps
 
 ## to-do-list and troubleshooting
 
-~~* [Django Tutorial: The Local Library website](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)~~
-~~* [Django Tutorial Part 2: Creating a skeleton website](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website)~~
-~~* [Django Tutorial Part 3: Using models](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models)~~
-~~* [Django Tutorial Part 4: Django admin site](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site)~~
-~~* [Django Tutorial Part 5: Creating our home page](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page)~~
+* [~~Django Tutorial: The Local Library website~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+* [~~Django Tutorial Part 2: Creating a skeleton website~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website)
+* [~~Django Tutorial Part 3: Using models~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models)
+* [~~Django Tutorial Part 4: Django admin site~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site)
+* [~~Django Tutorial Part 5: Creating our home page~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page)
     * [creating_the_index_page](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page#creating_the_index_page)
 * [Django Tutorial Part 6: Generic list and detail views](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
     * Challenge yourself
