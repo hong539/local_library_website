@@ -22,6 +22,7 @@ For Doing Django Tutorial: The Local Library website steps by steps
     * [static-files](https://docs.djangoproject.com/en/4.2/howto/static-files/)
 * [~~Django Tutorial Part 6: Generic list and detail views~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
     * ~~Challenge yourself~~
+    * [author_list.html](https://github.com/mdn/django-locallibrary-tutorial/blob/main/catalog/templates/catalog/author_list.html)
     * Multi Authors own one book. How to change it to work?
 * [Django Tutorial Part 7: Sessions framework](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions)
 * [Django Tutorial Part 8: User authentication and permissions](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication)
