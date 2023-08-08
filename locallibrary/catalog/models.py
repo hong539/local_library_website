@@ -85,8 +85,8 @@ class Author(models.Model):
     """Model representing an author."""
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+    year_of_birth = models.DateField(null=True, blank=True)
+    year_of_death = models.DateField('Died', null=True, blank=True)
 
     class Meta:
         ordering = ['last_name', 'first_name']
@@ -98,3 +98,13 @@ class Author(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.last_name}, {self.first_name}'
+
+from django.db import models
+
+class MyModel(models.Model):
+    my_date = models.DateField()
+
+    def save(self, *args, **kwargs):
+        self.my_date = self.my_date.strftime('%Y')
+        super(MyModel, self).save(*args, **kwargs)
+
