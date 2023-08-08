@@ -33,8 +33,6 @@ def index(request):
 # Add more pages
 from django.views import generic
 
-from django.views import generic
-
 class BookListView(generic.ListView):
     model = Book
     paginate_by = 2
@@ -42,3 +40,9 @@ class BookListView(generic.ListView):
 class BookDetailView(generic.DetailView):
     model = Book
 
+class AuthorListView(generic.ListView):
+    model = Author
+    paginate_by = 2
+
+class AuthorDetailView(generic.DetailView):
+    model = Author

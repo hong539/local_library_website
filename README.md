@@ -2,6 +2,8 @@
 
 For Doing Django Tutorial: The Local Library website steps by steps
 
+* [source codes](https://github.com/mdn/django-locallibrary-tutorial/tree/main)
+
 ## prerequisites
 
 * Python == 3.8.16
