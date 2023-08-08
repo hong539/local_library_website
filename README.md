@@ -19,8 +19,10 @@ For Doing Django Tutorial: The Local Library website steps by steps
 * [~~Django Tutorial Part 4: Django admin site~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site)
 * [~~Django Tutorial Part 5: Creating our home page~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page)
     * [creating_the_index_page](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page#creating_the_index_page)
+    * [static-files](https://docs.djangoproject.com/en/4.2/howto/static-files/)
 * [Django Tutorial Part 6: Generic list and detail views](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
     * Challenge yourself
+    * Multi Authors own one book. How to change it to work?
 * [Django Tutorial Part 7: Sessions framework](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions)
 * [Django Tutorial Part 8: User authentication and permissions](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication)
 * [Django Tutorial Part 9: Working with forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms)
