@@ -10,6 +10,8 @@ For Doing Django Tutorial: The Local Library website steps by steps
 * [pyenv+poetry](https://github.com/hong539/setup_dev_environment/blob/main/programing_languages/python/python.md)
 * Project dependcy detialls will be in pyproject.toml/poetry.lock
 * PostgreSQL or builtin SQLite
+* tree
+    * a CLI tools to list contents of directories in a tree-like format.
 
 ## to-do-list and troubleshooting
 
@@ -24,7 +26,7 @@ For Doing Django Tutorial: The Local Library website steps by steps
     * ~~Challenge yourself~~
     * [author_list.html](https://github.com/mdn/django-locallibrary-tutorial/blob/main/catalog/templates/catalog/author_list.html)
     * Multi Authors own one book. How to change it to work?
-* [Django Tutorial Part 7: Sessions framework](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions)
+* [~~Django Tutorial Part 7: Sessions framework~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions)
     * [How to use sessions](https://docs.djangoproject.com/en/4.2/topics/http/sessions/)
 * [Django Tutorial Part 8: User authentication and permissions](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication)
 * [Django Tutorial Part 9: Working with forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms)
