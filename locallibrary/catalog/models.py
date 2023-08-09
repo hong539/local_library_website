@@ -1,6 +1,8 @@
 from django.db import models
 from django.urls import reverse # Used to generate URLs by reversing the URL patterns
 import uuid # Required for unique book instances
+from datetime import date
+
 
 # Create your models here.
 class Genre(models.Model):
@@ -108,3 +110,11 @@ class MyModel(models.Model):
         self.my_date = self.my_date.strftime('%Y')
         super(MyModel, self).save(*args, **kwargs)
 
+from django.contrib.auth.models import User
+
+borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+
+@property
+def is_overdue(self):
+    """Determines if the book is overdue based on due date and current date."""
+    return bool(self.due_back and date.today() > self.due_back)
