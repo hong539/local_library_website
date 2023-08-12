@@ -31,6 +31,8 @@ For Doing Django Tutorial: The Local Library website steps by steps
 * [~~Django Tutorial Part 8: User authentication and permissions~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication)
     * [permissions](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication#permissions)
 * [Django Tutorial Part 9: Working with forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms)
+    * [django_form_handling_process](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms#django_form_handling_process)
+    * [renew-book_form_using_a_form_and_function_view](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms#renew-book_form_using_a_form_and_function_view)
 * [Django Tutorial Part 10: Testing a Django web application](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
 * [Django Tutorial Part 11: Deploying Django to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
 * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
