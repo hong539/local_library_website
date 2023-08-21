@@ -1,10 +1,16 @@
 # local_library_website
 
-For Doing Django Tutorial: The Local Library website steps by steps
+## Abstract
 
-* [source codes](https://github.com/mdn/django-locallibrary-tutorial/tree/main)
+1. For Doing Django Tutorial: The Local Library website steps by steps.
+    * [source codes](https://github.com/mdn/django-locallibrary-tutorial/tree/main)
+2. Extend and prepare My skills to find some good web-backend/devops/architecture jobs.
+3. Practice system architecture design.
+4. Try RDBMS(Relational Database Management System):　SQLite, PostgreSQL
 
-## prerequisites
+
+
+## Prerequisites
 
 * Python == 3.8.16
 * [pyenv+poetry](https://github.com/hong539/setup_dev_environment/blob/main/programing_languages/python/python.md)
@@ -13,7 +19,7 @@ For Doing Django Tutorial: The Local Library website steps by steps
 * tree
     * a CLI tools to list contents of directories in a tree-like format.
 
-## to-do-list and troubleshooting
+## To-do-list and troubleshooting
 
 * [~~Django Tutorial: The Local Library website~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
 * [~~Django Tutorial Part 2: Creating a skeleton website~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website)
@@ -64,7 +70,7 @@ LINE 1: CREATE TABLE "django_migrations" ("id" bigint NOT NULL PRIMA...
     * [postgresql-notes](https://docs.djangoproject.com/en/4.2/ref/databases/#postgresql-notes)    
     * [libpq](https://www.postgresql.org/docs/current/libpq.html)
 
-## quick start
+## Quick Start
 
 ```shell
 #check out prerequisites to prepare your environment
@@ -73,6 +79,7 @@ LINE 1: CREATE TABLE "django_migrations" ("id" bigint NOT NULL PRIMA...
 poetry shell
 
 #add packages
+poetry add django
 poetry add diagrams
 
 #for help
@@ -92,11 +99,17 @@ python3 manage.py migrate
 poetry add "psycopg[binary,pool]"
 ```
 
-## others
+## Others
 
+* [django-roadmap](https://github.com/HHHMHA/django-roadmap)
+* [nodejs](https://nodejs.org/en)
+* [expressjs](https://expressjs.com/)
+* [react](https://react.dev/)
+* [Vue.js](https://vuejs.org/)
+* [tailwindcss](https://tailwindcss.com/)
 * [Diagrams](https://diagrams.mingrammer.com/)
     * Diagram as Code
     * architecture design
-* Django plugins
-* Flask
-* Django REST framework（DRF）　
+* [Django plugins/packages](https://djangopackages.org/)
+* [Flask](https://flask.palletsprojects.com/en/2.3.x/)
+* [Django REST framework（DRF）](https://www.django-rest-framework.org/)
