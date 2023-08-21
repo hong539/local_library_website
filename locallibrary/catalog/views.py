@@ -126,7 +126,7 @@ from catalog.models import Author
 
 class AuthorCreate(CreateView):
     model = Author
-    fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
+    fields = ['first_name', 'last_name', 'year_of_birth', 'year_of_death']
     initial = {'date_of_death': '11/06/2020'}
 
 class AuthorUpdate(UpdateView):
