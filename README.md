@@ -69,6 +69,12 @@ LINE 1: CREATE TABLE "django_migrations" ("id" bigint NOT NULL PRIMA...
 ```shell
 #check out prerequisites to prepare your environment
 
+#spawns a virtual environment
+poetry shell
+
+#add packages
+poetry add diagrams
+
 #for help
 python3 manage.py help
 
@@ -85,3 +91,12 @@ python3 manage.py migrate
 #add packages by poetry
 poetry add "psycopg[binary,pool]"
 ```
+
+## others
+
+* [Diagrams](https://diagrams.mingrammer.com/)
+    * Diagram as Code
+    * architecture design
+* Django plugins
+* Flask
+* Django REST framework（DRF）　
