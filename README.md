@@ -42,6 +42,7 @@
     * [Testing the page](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms#testing_the_page_2)
     * [challenge_yourself](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms#challenge_yourself)
     * decimalfield
+    * [How to create custom model fields](https://docs.djangoproject.com/en/4.2/howto/custom-model-fields/)
 
 ```Python
 #src: https://docs.djangoproject.com/en/4.2/ref/models/fields/#decimalfield
