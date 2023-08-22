@@ -36,10 +36,12 @@
     * [How to use sessions](https://docs.djangoproject.com/en/4.2/topics/http/sessions/)
 * [~~Django Tutorial Part 8: User authentication and permissions~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication)
     * [permissions](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication#permissions)
-* [Django Tutorial Part 9: Working with forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms)
+* [~~Django Tutorial Part 9: Working with forms~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms)
     * [django_form_handling_process](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms#django_form_handling_process)
     * [renew-book_form_using_a_form_and_function_view](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms#renew-book_form_using_a_form_and_function_view)
     * [Testing the page](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms#testing_the_page_2)
+    * [challenge_yourself](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms#challenge_yourself)
+    * decimalfield
 
 ```Python
 #src: https://docs.djangoproject.com/en/4.2/ref/models/fields/#decimalfield

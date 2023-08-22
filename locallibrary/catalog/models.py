@@ -91,6 +91,7 @@ class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     year_of_birth = models.DateField(null=True, blank=True)
+    # year_of_birth = models.DateField()
     year_of_death = models.DateField('Died', null=True, blank=True)
 
     class Meta:
@@ -104,14 +105,10 @@ class Author(models.Model):
         """String for representing the Model object."""
         return f'{self.last_name}, {self.first_name}'
 
-from django.db import models
-
-class MyModel(models.Model):
-    my_date = models.DateField()
-
-    def save(self, *args, **kwargs):
-        self.my_date = self.my_date.strftime('%Y')
-        super(MyModel, self).save(*args, **kwargs)
+    # Not work
+    # def save(self, *args, **kwargs):
+    #     self.year_of_birth = self.year_of_birth.strftime('%Y')
+    #     super(Author, self).save(*args, **kwargs)    
 
 from django.contrib.auth.models import User
 
