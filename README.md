@@ -112,6 +112,7 @@ poetry add "psycopg[binary,pool]"
 
 ## Others
 
+* [Scaffold_(programming)](https://en.wikipedia.org/wiki/Scaffold_(programming))
 * [django-roadmap](https://github.com/HHHMHA/django-roadmap)
 * [nodejs](https://nodejs.org/en)
 * [expressjs](https://expressjs.com/)
