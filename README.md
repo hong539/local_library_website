@@ -127,6 +127,20 @@ python3 manage.py runserver
 python3 manage.py makemigrations
 python3 manage.py migrate
 
+#run test
+python3 manage.py test
+
+#
+python3 manage.py shell
+
+#src: https://docs.python.org/3.8/library/sys.html#sys.path
+#A list of strings that specifies the search path for modules. 
+#Initialized from the environment variable PYTHONPATH, plus an installation-dependent default.
+python -c "import sys; print(sys.path)"
+
+#add env PYTHONPATH
+export PYTHONPATH=/path/to/your/module:$PYTHONPATH
+
 #add packages by poetry
 poetry add "psycopg[binary,pool]"
 ```
