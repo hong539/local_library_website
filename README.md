@@ -56,10 +56,26 @@
     year_of_death = models.IntegerField(null=True, blank=True)
 ```
 * [Django Tutorial Part 10: Testing a Django web application](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
+    * [types_of_testing](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing#types_of_testing)
+        * Unit tests/Regression tests/Integration tests...etc
+        * [Python/module-unittest](https://docs.python.org/3/library/unittest.html#module-unittest)
+        * [liveservertestcase](https://docs.djangoproject.com/en/4.2/topics/testing/tools/#liveservertestcase)
+        * [using-different-testing-frameworks](https://docs.djangoproject.com/en/4.2/topics/testing/advanced/#using-different-testing-frameworks)
+        * [test_structure_overview](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing#test_structure_overview)
+        ```shell
+        tree .
+        #structure
+        .
+        ├── __init__.py
+        ├── test_forms.py
+        ├── test_models.py
+        └── test_views.py
+        ```
 * [Django Tutorial Part 11: Deploying Django to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
-* ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
-    * [reinstall-the-db-sqlite3-file-in-django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
-* change to another separate DB such as PostgreSQL
+* Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
+    * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
+        * [reinstall-the-db-sqlite3-file-in-django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
+    * change to another separate DB such as PostgreSQL
     * WARNING: password file ".my_pgpass" has group or world access; permissions should be u=rw (0600) or less
     * django.db.migrations.exceptions.MigrationSchemaMissing: Unable to create the django_migrations table (permission denied for schema public
 LINE 1: CREATE TABLE "django_migrations" ("id" bigint NOT NULL PRIMA...
@@ -117,6 +133,8 @@ poetry add "psycopg[binary,pool]"
 
 ## Others
 
+* [How to deploy with WSGI](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/)
+* [PEP 3333 – Python Web Server Gateway Interface(WSGI)](https://peps.python.org/pep-3333/)
 * [Python/load test/locust](https://docs.locust.io/en/stable/quickstart.html)
 * [Scaffold_(programming)](https://en.wikipedia.org/wiki/Scaffold_(programming))
 * [django-roadmap](https://github.com/HHHMHA/django-roadmap)
