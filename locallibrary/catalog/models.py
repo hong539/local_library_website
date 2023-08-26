@@ -3,6 +3,7 @@ from django.urls import reverse # Used to generate URLs by reversing the URL pat
 import uuid # Required for unique book instances
 from datetime import date
 from django.contrib.auth.models import User
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 # Create your models here.
@@ -86,14 +87,23 @@ class BookInstance(models.Model):
         """String for representing the Model object."""
         return f'{self.id} ({self.book.title}) {self.book} {self.due_back}'
 
+def current_year():
+    return date.today().year
+
+def max_value_from_current_year():
+    return MaxValueValidator(current_year())
+
+def year_choices():
+    return [(r,r) for r in range(1984, date.today().year+1)]
+
 class Author(models.Model):
     """Model representing an author."""
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)    
     date_of_birth = models.DateField(null=True, blank=True)
     date_of_death = models.DateField('Died', null=True, blank=True)
-    year_of_birth = models.IntegerField(null=True, blank=True)
-    year_of_death = models.IntegerField(null=True, blank=True)
+    year_of_birth = models.IntegerField(null=True, blank=True, validators=[MinValueValidator(0000), max_value_from_current_year()])
+    year_of_death = models.IntegerField(null=True, blank=True, validators=[MinValueValidator(0000), max_value_from_current_year()])
 
     class Meta:
         ordering = ['last_name', 'first_name']

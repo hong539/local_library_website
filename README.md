@@ -51,9 +51,9 @@
 
 ```Python
 #src: https://docs.djangoproject.com/en/4.2/ref/models/fields/#decimalfield
-#Modify DateField to IntegerField with "YYYY" year format
-    year_of_birth = models.DateField(null=True, blank=True)
-    year_of_death = models.DateField('Died', null=True, blank=True)
+#Add IntegerField with "YYYY" year format
+    year_of_birth = models.IntegerField(null=True, blank=True)
+    year_of_death = models.IntegerField(null=True, blank=True)
 ```
 * [Django Tutorial Part 10: Testing a Django web application](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
 * [Django Tutorial Part 11: Deploying Django to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
