@@ -43,10 +43,15 @@
     * [challenge_yourself](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms#challenge_yourself)
     * decimalfield
     * [How to create custom model fields](https://docs.djangoproject.com/en/4.2/howto/custom-model-fields/)
+        * [writing-a-field-subclass](https://docs.djangoproject.com/en/4.2/howto/custom-model-fields/#writing-a-field-subclass)
+    * INTEGER
+        * [Django/models/fields/IntegerField](https://docs.djangoproject.com/en/4.2/ref/models/fields/#integerfield)
+    * [VARCHAR](https://docs.aws.amazon.com/redshift/latest/dg/r_Character_types.html#r_Character_types-varchar-or-character-varying)
+    * [year-field-in-django](https://stackoverflow.com/questions/49051017/year-field-in-django)
 
 ```Python
 #src: https://docs.djangoproject.com/en/4.2/ref/models/fields/#decimalfield
-#Modify dataform
+#Modify DateField to IntegerField with "YYYY" year format
     year_of_birth = models.DateField(null=True, blank=True)
     year_of_death = models.DateField('Died', null=True, blank=True)
 ```
@@ -112,6 +117,7 @@ poetry add "psycopg[binary,pool]"
 
 ## Others
 
+* [Python/load test/locust](https://docs.locust.io/en/stable/quickstart.html)
 * [Scaffold_(programming)](https://en.wikipedia.org/wiki/Scaffold_(programming))
 * [django-roadmap](https://github.com/HHHMHA/django-roadmap)
 * [nodejs](https://nodejs.org/en)

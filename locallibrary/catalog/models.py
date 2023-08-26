@@ -89,10 +89,11 @@ class BookInstance(models.Model):
 class Author(models.Model):
     """Model representing an author."""
     first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    year_of_birth = models.DateField(null=True, blank=True)
-    # year_of_birth = models.DateField()
-    year_of_death = models.DateField('Died', null=True, blank=True)
+    last_name = models.CharField(max_length=100)    
+    # year_of_birth = models.DateField(null=True, blank=True)
+    # year_of_death = models.DateField('Died', null=True, blank=True)
+    year_of_birth = models.IntegerField()
+    year_of_death = models.IntegerField()
 
     class Meta:
         ordering = ['last_name', 'first_name']
@@ -103,12 +104,7 @@ class Author(models.Model):
 
     def __str__(self):
         """String for representing the Model object."""
-        return f'{self.last_name}, {self.first_name}'
-
-    # Not work
-    # def save(self, *args, **kwargs):
-    #     self.year_of_birth = self.year_of_birth.strftime('%Y')
-    #     super(Author, self).save(*args, **kwargs)    
+        return f'{self.last_name}, {self.first_name}' 
 
 from django.contrib.auth.models import User
 
