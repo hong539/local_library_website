@@ -71,6 +71,14 @@
         ├── test_models.py
         └── test_views.py
         ```
+        * [ImportError: 'tests' module incorrectly imported from 'somepath/locallibrary/catalog/tests'. Expected 'somepath/locallibrary/catalog'. Is this module globally installed?](https://ithelp.ithome.com.tw/articles/10276107)
+            * filename "test.py" and module directory name "tests" 
+            * change the duplicate filename or remove it
+        * execute "python3 manage.py test"
+            * psycopg.errors.CannotCoerce: cannot cast type date to integer
+                * [django.db.utils.ProgrammingError: cannot cast type integer to date](https://stackoverflow.com/questions/72459658/django-db-utils-programmingerror-cannot-cast-type-integer-to-date)
+                * Reset Migrations under catalog module
+            * psycopg.errors.UndefinedTable: relation "auth_user" does not exist
 * [Django Tutorial Part 11: Deploying Django to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
     * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~

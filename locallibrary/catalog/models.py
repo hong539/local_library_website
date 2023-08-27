@@ -101,7 +101,7 @@ class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)    
     date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+    date_of_death = models.DateField('Died date', null=True, blank=True)
     year_of_birth = models.IntegerField(null=True, blank=True, validators=[MinValueValidator(0000), max_value_from_current_year()])
     year_of_death = models.IntegerField(null=True, blank=True, validators=[MinValueValidator(0000), max_value_from_current_year()])
 
