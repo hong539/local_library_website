@@ -77,8 +77,10 @@
         * execute "python3 manage.py test"
             * psycopg.errors.CannotCoerce: cannot cast type date to integer
                 * [django.db.utils.ProgrammingError: cannot cast type integer to date](https://stackoverflow.com/questions/72459658/django-db-utils-programmingerror-cannot-cast-type-integer-to-date)
-                * Reset Migrations under catalog module
             * psycopg.errors.UndefinedTable: relation "auth_user" does not exist
+                * [psycopg.errors.UndefinedTable: relation "auth_user" does not exist](https://stackoverflow.com/questions/72096130/getting-programmingerror-relation-auth-user-does-not-exist-while-running-test)
+            * Solution: Reset/Remove Migrations files under catalog module and don't forget our "\_\_init\_\_.py" file                
+                * [Pythno/modules/\_\_init\_\_.py](https://docs.python.org/3.8/tutorial/modules.html)
 * [Django Tutorial Part 11: Deploying Django to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
     * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
@@ -137,6 +139,13 @@ python3 manage.py migrate
 
 #run test
 python3 manage.py test
+#Showing more test information
+python3 manage.py test --verbosity 2
+#Speeding things up
+python3 manage.py test --parallel auto
+#Running specific tests
+python3 manage.py test catalog.tests
+
 
 #
 python3 manage.py shell
