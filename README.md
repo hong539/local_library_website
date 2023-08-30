@@ -66,7 +66,7 @@
             * psycopg.errors.UndefinedTable: relation "auth_user" does not exist
                 * [psycopg.errors.UndefinedTable: relation "auth_user" does not exist](https://stackoverflow.com/questions/72096130/getting-programmingerror-relation-auth-user-does-not-exist-while-running-test)
             * Solution: Reset/Remove Migrations files under catalog module and don't forget our "\_\_init\_\_.py" file                
-                * [Pythno/modules/\_\_init\_\_.py](https://docs.python.org/3.8/tutorial/modules.html)  
+                * [Python/modules/\_\_init\_\_.py](https://docs.python.org/3.8/tutorial/modules.html)  
     * [types_of_testing](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing#types_of_testing)
         * Unit tests/Regression tests/Integration tests...etc
         * [Python/module-unittest](https://docs.python.org/3/library/unittest.html#module-unittest)
