@@ -15,7 +15,10 @@
 * Python == 3.8.16
 * [pyenv+poetry](https://github.com/hong539/setup_dev_environment/blob/main/programing_languages/python/python.md)
 * Project dependcy detialls will be in pyproject.toml/poetry.lock
-* PostgreSQL or builtin SQLite
+* PostgreSQL == 15.3 or Django builtin SQLite
+    * [pacman directly install PostgreSQL on Arch Linux](https://wiki.archlinux.org/title/PostgreSQL)
+    * [PostgreSQL 15.4 Documentation](https://www.postgresql.org/docs/15/index.html)
+    * [PostgreSQL with docker](https://hub.docker.com/_/postgres)
 * tree
     * a CLI tools to list contents of directories in a tree-like format.
 
@@ -117,6 +120,10 @@ LINE 1: CREATE TABLE "django_migrations" ("id" bigint NOT NULL PRIMA...
 
 ```shell
 #check out prerequisites to prepare your environment
+
+#running postgresql server with this commands
+#if everything is setting up!
+sudo systemctl status postgresql.service
 
 #spawns a virtual environment
 poetry shell
