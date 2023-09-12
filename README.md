@@ -58,8 +58,9 @@
     year_of_birth = models.IntegerField(null=True, blank=True)
     year_of_death = models.IntegerField(null=True, blank=True)
 ```
-* [Django Tutorial Part 10: Testing a Django web application](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
+* [~~Django Tutorial Part 10: Testing a Django web application~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
     * [challenge_yourself](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing#challenge_yourself)
+        * [src:test_views.py](https://github.com/mdn/django-locallibrary-tutorial/blob/main/catalog/tests/test_views.py)
     * [LocalLibrary tests](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing#locallibrary_tests)
         * [ImportError: 'tests' module incorrectly imported from 'somepath/locallibrary/catalog/tests'. Expected 'somepath/locallibrary/catalog'. Is this module globally installed?](https://ithelp.ithome.com.tw/articles/10276107)
             * filename "test.py" and module directory name "tests" 
@@ -86,7 +87,9 @@
         ├── test_models.py
         └── test_views.py
         ```              
-* [Django Tutorial Part 11: Deploying Django to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
+* [Django Tutorial Part 11: Deploying Django to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)    
+    * [Getting your website ready to publish](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment#getting_your_website_ready_to_publish)
+    * [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/)
 * [web_application_security](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security)
 * [Assessment: DIY Django mini blog](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
@@ -176,6 +179,9 @@ export PYTHONPATH=/path/to/your/module:$PYTHONPATH
 
 #add packages by poetry
 poetry add "psycopg[binary,pool]"
+
+#deploy check
+python3 manage.py check --deploy
 ```
 
 ## Others
@@ -201,5 +207,7 @@ poetry add "psycopg[binary,pool]"
     * Diagram as Code
     * architecture design
 * [Django plugins/packages](https://djangopackages.org/)
+    * [markdown](https://pypi.org/project/Markdown/)
+    * [django-markdownify](https://pypi.org/project/django-markdownify/)
 * [Flask](https://flask.palletsprojects.com/en/2.3.x/)
 * [Django REST framework（DRF）](https://www.django-rest-framework.org/)
