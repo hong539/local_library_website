@@ -187,6 +187,7 @@ python3 manage.py check --deploy
 
 ## Others
 
+* [flake8](https://flake8.pycqa.org/en/latest/)
 * [pandas](https://github.com/pandas-dev/pandas)
 * [gunicorn](https://github.com/benoitc/gunicorn)
 * [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
