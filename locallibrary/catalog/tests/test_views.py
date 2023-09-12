@@ -42,3 +42,9 @@ class AuthorListViewTest(TestCase):
         self.assertTrue('is_paginated' in response.context)
         self.assertTrue(response.context['is_paginated'] == True)
         self.assertEqual(len(response.context['author_list']), 3)
+
+class AuthorCreate(PermissionRequiredMixin, CreateView):
+    model = Author
+    fields = '__all__'
+    initial = {'date_of_death':'12/10/2016'}
+    permission_required = 'catalog.can_mark_returned'

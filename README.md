@@ -59,6 +59,7 @@
     year_of_death = models.IntegerField(null=True, blank=True)
 ```
 * [Django Tutorial Part 10: Testing a Django web application](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
+    * [challenge_yourself](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing#challenge_yourself)
     * [LocalLibrary tests](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing#locallibrary_tests)
         * [ImportError: 'tests' module incorrectly imported from 'somepath/locallibrary/catalog/tests'. Expected 'somepath/locallibrary/catalog'. Is this module globally installed?](https://ithelp.ithome.com.tw/articles/10276107)
             * filename "test.py" and module directory name "tests" 
@@ -162,7 +163,7 @@ python3 manage.py test catalog.tests.test_views
 python3 manage.py test catalog.tests.test_forms
 
 
-#
+#Starts the Python interactive interpreter
 python3 manage.py shell
 
 #src: https://docs.python.org/3.8/library/sys.html#sys.path
@@ -179,6 +180,13 @@ poetry add "psycopg[binary,pool]"
 
 ## Others
 
+* [pandas](https://github.com/pandas-dev/pandas)
+* [gunicorn](https://github.com/benoitc/gunicorn)
+* [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+* [distrochooser](https://distrochooser.de/)
+    * [Dockerfile example from distrochooser](https://github.com/distrochooser/distrochooser/blob/master/backend/Dockerfile)
+    * Vue
+    * Django
 * [How to deploy with WSGI](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/)
 * [PEP 3333 – Python Web Server Gateway Interface(WSGI)](https://peps.python.org/pep-3333/)
 * [Python/load test/locust](https://docs.locust.io/en/stable/quickstart.html)
