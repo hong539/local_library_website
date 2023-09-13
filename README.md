@@ -13,12 +13,14 @@
 ## Prerequisites
 
 * Python == 3.8.16
-* [pyenv+poetry](https://github.com/hong539/setup_dev_environment/blob/main/programing_languages/python/python.md)
-* Project dependcy detialls will be in pyproject.toml/poetry.lock
+* [pyenv+poetry](https://github.com/hong539/setup_dev_environment/blob/main/programming_languages/python/python.md#usage-with-pyenvpoetry)
+    * pyenv for Python versions control
+    * poetry for Project dependency control
+    * Project dependcy detialls will be in pyproject.toml/poetry.lock
 * PostgreSQL == 15.3 or Django builtin SQLite
-    * [pacman directly install PostgreSQL on Arch Linux](https://wiki.archlinux.org/title/PostgreSQL)
     * [PostgreSQL 15.4 Documentation](https://www.postgresql.org/docs/15/index.html)
     * [PostgreSQL with docker](https://hub.docker.com/_/postgres)
+    * [pacman directly install PostgreSQL on Arch Linux](https://wiki.archlinux.org/title/PostgreSQL)
 * tree
     * a CLI tools to list contents of directories in a tree-like format.
 
@@ -92,7 +94,10 @@
     * [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/)
     * deploy via docekr/podman conainter
         * Dockerfile part for build docker images with this Django project
+            * [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
             * [What is the use of PYTHONUNBUFFERED in docker file?](https://stackoverflow.com/questions/59812009/what-is-the-use-of-pythonunbuffered-in-docker-file)
+            * [PYTHONDONTWRITEBYTECODE](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE)
+            * [PYTHONUNBUFFERED](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUNBUFFERED)
 * [web_application_security](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security)
 * [Assessment: DIY Django mini blog](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
@@ -186,12 +191,18 @@ poetry add "psycopg[binary,pool]"
 #add packages by poetry to extras section
 poetry add diagrams --optional --extras diagrams
 
+#export requirements.txt if needed
+poetry export -f requirements.txt --output requirements.txt
+poetry export -f requirements.txt --output requirements.txt --without-hashes
+
 #deploy check
 python3 manage.py check --deploy
 ```
 
 ## Others
 
+* [restful-demo.pdf](https://github.com/TritonHo/slides/blob/master/restful-demo.pdf)
+    * [RESTful API Design-tw-2.2.pdf](https://github.com/TritonHo/slides/blob/master/Taipei%202019-06%20talk/RESTful%20API%20Design-tw-2.2.pdf)
 * [flake8](https://flake8.pycqa.org/en/latest/)
 * [pandas](https://github.com/pandas-dev/pandas)
 * [gunicorn](https://github.com/benoitc/gunicorn)
