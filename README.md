@@ -187,6 +187,7 @@ export PYTHONPATH=/path/to/your/module:$PYTHONPATH
 
 #add packages by poetry
 poetry add "psycopg[binary,pool]"
+poetry add django-environ
 
 #add packages by poetry to extras section
 poetry add diagrams --optional --extras diagrams
@@ -201,6 +202,7 @@ python3 manage.py check --deploy
 
 ## Others
 
+* [The Twelve Factors](https://www.12factor.net/)
 * [restful-demo.pdf](https://github.com/TritonHo/slides/blob/master/restful-demo.pdf)
     * [RESTful API Design-tw-2.2.pdf](https://github.com/TritonHo/slides/blob/master/Taipei%202019-06%20talk/RESTful%20API%20Design-tw-2.2.pdf)
 * [flake8](https://flake8.pycqa.org/en/latest/)
@@ -227,5 +229,6 @@ python3 manage.py check --deploy
 * [Django plugins/packages](https://djangopackages.org/)
     * [markdown](https://pypi.org/project/Markdown/)
     * [django-markdownify](https://pypi.org/project/django-markdownify/)
+    * [django-environ](https://github.com/joke2k/django-environ)
 * [Flask](https://flask.palletsprojects.com/en/2.3.x/)
 * [Django REST framework（DRF）](https://www.django-rest-framework.org/)

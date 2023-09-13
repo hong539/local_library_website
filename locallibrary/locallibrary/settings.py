@@ -86,14 +86,29 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 #     }
 # }
 
-#new one
+#for dev in localhost
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "OPTIONS": {
+#             "service": "my_service",
+#             "passfile": ".my_pgpass",
+#         },
+#     }
+# }
+
+#for read env from OS
+import environ
+env = environ.Env()
+env.read_env()
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "OPTIONS": {
-            "service": "my_service",
-            "passfile": ".my_pgpass",
-        },
+        "USER": env("DB_USER"),
+        "PASSWORD": env("DB_PASSWORD"),        
+        "HOST": env("DB_HOST"),
+        "PORT": env("DB_PORT"),
+        "NAME": env("DB_NAME"),
     }
 }
 
