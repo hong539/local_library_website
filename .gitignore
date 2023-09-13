@@ -127,6 +127,14 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.env.dev
+
+#ignore personal PostgreSQL login info
+/locallibrary/.my_pgpass_dev
+/locallibrary/.pg_service.conf_dev
+
+#ignore personal Django CMS login info
+/locallibrary/.my_cms_dev
 
 # Spyder project settings
 .spyderproject
@@ -158,10 +166,3 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
-
-#ignore personal PostgreSQL login info
-/locallibrary/.my_pgpass_dev
-/locallibrary/.pg_service.conf_dev
-
-#ignore personal Django CMS login info
-/locallibrary/.my_cms_dev

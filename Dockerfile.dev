@@ -31,11 +31,11 @@ WORKDIR /app
 #set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ARG DB_USER
-ARG DB_PASSWORD
-ARG DB_HOST
-ARG DB_PORT
-ARG DB_NAME
+ENV DB_USER test
+ENV DB_HOST host
+ENV DB_PASSWORD passwd
+ENV DB_PORT port
+ENV DB_NAME test_db
 
 #COPY Django files needed
 COPY --from=builder /temp/requirements.txt /app
@@ -44,4 +44,5 @@ COPY /locallibrary /app
 RUN pip install -r requirements.txt
 
 #run dev server
-CMD ["python3", "manage.py", "runserver"]
+EXPOSE 8000
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]

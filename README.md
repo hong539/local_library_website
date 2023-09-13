@@ -94,12 +94,15 @@
     * [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/)
     * deploy via docekr/podman conainter
         * Dockerfile part for build docker images with this Django project
+            * [production-dockerfile](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/#production-dockerfile)
             * [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
             * [What is the use of PYTHONUNBUFFERED in docker file?](https://stackoverflow.com/questions/59812009/what-is-the-use-of-pythonunbuffered-in-docker-file)
             * [PYTHONDONTWRITEBYTECODE](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE)
             * [PYTHONUNBUFFERED](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUNBUFFERED)
-            * podman run localhost/dev-test
+            * [ENV PATH="${PATH}:/root/.local/bin"](https://github.com/python-poetry/poetry/issues/525)
+            * podman run -d --env-file=.env.dev --name local_library -p 8000:8000 localhost/dev-test
                 * django.core.exceptions.ImproperlyConfigured: Set the DB_USER environment variable
+                * django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'x.x.x.x:8000'. You may need to add 'x.x.x.x' to ALLOWED_HOSTS.
 * [web_application_security](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security)
 * [Assessment: DIY Django mini blog](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
@@ -201,11 +204,15 @@ poetry export -f requirements.txt --output requirements.txt --without-hashes
 python3 manage.py check --deploy
 
 #docker/podman build container image
-docker build --build-arg DB_USER=user --build-arg DB_PASSWORD=passwd --build-arg DB_HOST=host --build-arg DB_PORT=port --build-arg DB_NAME=db -t dev-test -f Dockerfile.dev
-podman build --build-arg DB_USER=user --build-arg DB_PASSWORD=passwd --build-arg DB_HOST=host --build-arg DB_PORT=port --build-arg DB_NAME=db -t dev-test -f Dockerfile.dev
+#docker build -t dev-test -f Dockerfile.dev
+podman build -t dev-test -f Dockerfile.dev
+
+#podman operations
+podman container list --all
+podman rmi localhost/dev-test:latest
 
 #test docekr/podman container image in localhost when PostgreSQL is online
-podman run localhost/dev-test
+podman run -d --env-file=.env.dev --name local_library -p 8000:8000 localhost/dev-test
 ```
 
 ## Others
