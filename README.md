@@ -91,6 +91,8 @@
     * [Getting your website ready to publish](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment#getting_your_website_ready_to_publish)
     * [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/)
     * deploy via docekr/podman conainter
+        * Dockerfile part for build docker images with this Django project
+            * [What is the use of PYTHONUNBUFFERED in docker file?](https://stackoverflow.com/questions/59812009/what-is-the-use-of-pythonunbuffered-in-docker-file)
 * [web_application_security](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security)
 * [Assessment: DIY Django mini blog](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
@@ -180,6 +182,9 @@ export PYTHONPATH=/path/to/your/module:$PYTHONPATH
 
 #add packages by poetry
 poetry add "psycopg[binary,pool]"
+
+#add packages by poetry to extras section
+poetry add diagrams --optional --extras diagrams
 
 #deploy check
 python3 manage.py check --deploy
