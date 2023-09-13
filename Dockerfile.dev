@@ -1,6 +1,6 @@
 #1st stage
 #pull official base image
-FROM python:3.8.18-slim-bullseye AS builder
+FROM python:3.8.18-bullseye AS builder
 
 #set the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions
 WORKDIR /temp
@@ -15,13 +15,15 @@ RUN apt-get update && \
 
 #install dependencies manager poetry
 RUN curl -sSL https://install.python-poetry.org | python3 -
+ENV PATH="${PATH}:/root/.local/bin"
+RUN poetry --version
 
 #install dependencies from this Python project
 COPY poetry.lock pyproject.toml /temp
-RUN poetry install
+RUN poetry export -f requirements.txt --output requirements.txt
 
 #2nd stage
-FROM builder AS dev
+FROM python:3.8.18-slim-bullseye
 
 #set the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions
 WORKDIR /app
@@ -35,10 +37,11 @@ ARG DB_HOST
 ARG DB_PORT
 ARG DB_NAME
 
-
-
 #COPY Django files needed
+COPY --from=builder /temp/requirements.txt /app
 COPY /locallibrary /app
 
+RUN pip install -r requirements.txt
+
 #run dev server
-RUN ["python3", "manage.py", "runserver"]
+CMD ["python3", "manage.py", "runserver"]

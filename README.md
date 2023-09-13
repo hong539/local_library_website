@@ -98,6 +98,8 @@
             * [What is the use of PYTHONUNBUFFERED in docker file?](https://stackoverflow.com/questions/59812009/what-is-the-use-of-pythonunbuffered-in-docker-file)
             * [PYTHONDONTWRITEBYTECODE](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE)
             * [PYTHONUNBUFFERED](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUNBUFFERED)
+            * podman run localhost/dev-test
+                * django.core.exceptions.ImproperlyConfigured: Set the DB_USER environment variable
 * [web_application_security](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security)
 * [Assessment: DIY Django mini blog](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
@@ -106,13 +108,12 @@
     * change to another separate DB such as PostgreSQL
     * WARNING: password file ".my_pgpass" has group or world access; permissions should be u=rw (0600) or less
     * django.db.migrations.exceptions.MigrationSchemaMissing: Unable to create the django_migrations table (permission denied for schema public
-LINE 1: CREATE TABLE "django_migrations" ("id" bigint NOT NULL PRIMA...
-        
+LINE 1: CREATE TABLE "django_migrations" ("id" bigint NOT NULL PRIMA...        
         * [create-table-django-migrations-id-bigint-not-null-prima](https://stackoverflow.com/questions/74217259/create-table-django-migrations-id-bigint-not-null-prima)
+
         ```shell      
         ALTER DATABASE <db_name> OWNER TO <db_user>;
-        ```
-    
+        ```    
     * django.db.utils.OperationalError: connection is bad: definition of service "my_service" not found
         * [34.17. The Connection Service File](https://www.postgresql.org/docs/15/libpq-pgservice.html)
         * [Trouble hooking up postgres to django](https://stackoverflow.com/questions/71337173/django-4-connection-to-postgresql-using-passfile-fe-sendauth-no-password-supp)
@@ -202,6 +203,9 @@ python3 manage.py check --deploy
 #docker/podman build container image
 docker build --build-arg DB_USER=user --build-arg DB_PASSWORD=passwd --build-arg DB_HOST=host --build-arg DB_PORT=port --build-arg DB_NAME=db -t dev-test -f Dockerfile.dev
 podman build --build-arg DB_USER=user --build-arg DB_PASSWORD=passwd --build-arg DB_HOST=host --build-arg DB_PORT=port --build-arg DB_NAME=db -t dev-test -f Dockerfile.dev
+
+#test docekr/podman container image in localhost when PostgreSQL is online
+podman run localhost/dev-test
 ```
 
 ## Others
