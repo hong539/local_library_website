@@ -198,6 +198,10 @@ poetry export -f requirements.txt --output requirements.txt --without-hashes
 
 #deploy check
 python3 manage.py check --deploy
+
+#docker/podman build container image
+docker build --build-arg DB_USER=user --build-arg DB_PASSWORD=passwd --build-arg DB_HOST=host --build-arg DB_PORT=port --build-arg DB_NAME=db -t dev-test -f Dockerfile.dev
+podman build --build-arg DB_USER=user --build-arg DB_PASSWORD=passwd --build-arg DB_HOST=host --build-arg DB_PORT=port --build-arg DB_NAME=db -t dev-test -f Dockerfile.dev
 ```
 
 ## Others
