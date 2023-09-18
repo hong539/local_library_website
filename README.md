@@ -27,7 +27,9 @@
 ## To-do-list/troubleshooting/guides/tips...etc
 
 * Update locallibrary/settings.py for reading env eaisly from file or runtime?
+    * [os.path](https://docs.python.org/3.8/library/os.path.html)
     * [settings tips for Django](https://github.com/django/djangoproject.com/tree/main/djangoproject/settings)
+    * [Configuring Django Settings: Best Practices](https://djangostars.com/blog/configuring-django-settings-best-practices/)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
     * [postgresql-notes](https://docs.djangoproject.com/en/4.2/ref/databases/#postgresql-notes)    
     * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
