@@ -26,6 +26,8 @@
 
 ## To-do-list/troubleshooting/guides/tips...etc
 
+* Update locallibrary/settings.py for reading env eaisly from file or runtime?
+    * [settings tips for Django](https://github.com/django/djangoproject.com/tree/main/djangoproject/settings)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
     * [postgresql-notes](https://docs.djangoproject.com/en/4.2/ref/databases/#postgresql-notes)    
     * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
@@ -54,7 +56,6 @@
     * [psycopg3: an engine for postgresql](https://www.psycopg.org/psycopg3/docs/basic/install.html#supported-systems)
     * [SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.](https://www.sqlalchemy.org/)    
     * [libpq](https://www.postgresql.org/docs/current/libpq.html)
-* [settings tips for Django](https://github.com/django/djangoproject.com/tree/main/djangoproject/settings)
 * [~~Django Tutorial: The Local Library website~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
 * [~~Django Tutorial Part 2: Creating a skeleton website~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website)
 * [~~Django Tutorial Part 3: Using models~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models)
