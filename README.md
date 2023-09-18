@@ -24,8 +24,37 @@
 * tree
     * a CLI tools to list contents of directories in a tree-like format.
 
-## To-do-list and troubleshooting
+## To-do-list/troubleshooting/guides/tips...etc
 
+* Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
+    * [postgresql-notes](https://docs.djangoproject.com/en/4.2/ref/databases/#postgresql-notes)    
+    * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
+        * [reinstall-the-db-sqlite3-file-in-django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
+    * change to another separate DB such as PostgreSQL
+    * WARNING: password file ".my_pgpass" has group or world access; permissions should be u=rw (0600) or less
+    * django.db.migrations.exceptions.MigrationSchemaMissing: Unable to create the django_migrations table (permission denied for schema public...etc
+        * [create-table-django-migrations-id-bigint-not-null-prima](https://stackoverflow.com/questions/74217259/create-table-django-migrations-id-bigint-not-null-prima)
+
+        ```shell      
+        ALTER DATABASE <db_name> OWNER TO <db_user>;
+        ```    
+
+    * django.db.utils.OperationalError: connection is bad: definition of service "my_service" not found
+        * [34.17. The Connection Service File](https://www.postgresql.org/docs/15/libpq-pgservice.html)
+        * [Trouble hooking up postgres to django](https://stackoverflow.com/questions/71337173/django-4-connection-to-postgresql-using-passfile-fe-sendauth-no-password-supp)
+    * ~~django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module~~
+        ```shell
+        poetry add "psycopg[binary,pool]"
+        ```
+    * [How do I reinstall the db.sqlite3 file in django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
+    * ~~could not save history to file "/var/lib/postgres/.psql_history": No such file or directory~~
+        * touch file and chown user/usergroup
+    * ~~FATAL:  password authentication failed for user~~
+        * add password for user via commands
+    * [psycopg3: an engine for postgresql](https://www.psycopg.org/psycopg3/docs/basic/install.html#supported-systems)
+    * [SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.](https://www.sqlalchemy.org/)    
+    * [libpq](https://www.postgresql.org/docs/current/libpq.html)
+* [settings tips for Django](https://github.com/django/djangoproject.com/tree/main/djangoproject/settings)
 * [~~Django Tutorial: The Local Library website~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
 * [~~Django Tutorial Part 2: Creating a skeleton website~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website)
 * [~~Django Tutorial Part 3: Using models~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models)
@@ -93,7 +122,8 @@
     * [Getting your website ready to publish](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment#getting_your_website_ready_to_publish)
     * [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/)
     * deploy via docekr/podman conainter
-        * Dockerfile part for build docker images with this Django project
+        * Dockerfile part for build docker images with this Django project via "podman build"
+            * [--no-cache](https://github.com/containers/podman-compose/issues/205)
             * [production-dockerfile](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/#production-dockerfile)
             * [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
             * [What is the use of PYTHONUNBUFFERED in docker file?](https://stackoverflow.com/questions/59812009/what-is-the-use-of-pythonunbuffered-in-docker-file)
@@ -106,34 +136,7 @@
                     * ALLOWED_HOSTS in settings.py
 * [web_application_security](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security)
 * [Assessment: DIY Django mini blog](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
-* Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
-    * ~~fix this error : django.db.utils.OperationalError: no such table: catalog_book~~
-        * [reinstall-the-db-sqlite3-file-in-django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
-    * change to another separate DB such as PostgreSQL
-    * WARNING: password file ".my_pgpass" has group or world access; permissions should be u=rw (0600) or less
-    * django.db.migrations.exceptions.MigrationSchemaMissing: Unable to create the django_migrations table (permission denied for schema public
-LINE 1: CREATE TABLE "django_migrations" ("id" bigint NOT NULL PRIMA...        
-        * [create-table-django-migrations-id-bigint-not-null-prima](https://stackoverflow.com/questions/74217259/create-table-django-migrations-id-bigint-not-null-prima)
 
-        ```shell      
-        ALTER DATABASE <db_name> OWNER TO <db_user>;
-        ```    
-    * django.db.utils.OperationalError: connection is bad: definition of service "my_service" not found
-        * [34.17. The Connection Service File](https://www.postgresql.org/docs/15/libpq-pgservice.html)
-        * [Trouble hooking up postgres to django](https://stackoverflow.com/questions/71337173/django-4-connection-to-postgresql-using-passfile-fe-sendauth-no-password-supp)
-    * ~~django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module~~
-        ```shell
-        poetry add "psycopg[binary,pool]"
-        ```
-    * [How do I reinstall the db.sqlite3 file in django](https://stackoverflow.com/questions/64808378/how-do-i-reinstall-the-db-sqlite3-file-in-django)
-    * ~~could not save history to file "/var/lib/postgres/.psql_history": No such file or directory~~
-        * touch file and chown user/usergroup
-    * ~~FATAL:  password authentication failed for user~~
-        * add password for user via commands
-    * [psycopg3: an engine for postgresql](https://www.psycopg.org/psycopg3/docs/basic/install.html#supported-systems)
-    * [SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.](https://www.sqlalchemy.org/)
-    * [postgresql-notes](https://docs.djangoproject.com/en/4.2/ref/databases/#postgresql-notes)    
-    * [libpq](https://www.postgresql.org/docs/current/libpq.html)
 
 ## Quick Start
 
@@ -204,13 +207,15 @@ poetry export -f requirements.txt --output requirements.txt --without-hashes
 #deploy check
 python3 manage.py check --deploy
 
+#podman operations
+podman images
+podman container list --all
+podman container rm local_library
+podman rmi localhost/dev-test:latest
+
 #docker/podman build container image
 #docker build -t dev-test -f Dockerfile.dev
-podman build -t dev-test -f Dockerfile.dev
-
-#podman operations
-podman container list --all
-podman rmi localhost/dev-test:latest
+podman build --no-cache -t dev-test -f Dockerfile.dev
 
 #test docekr/podman container image in localhost when PostgreSQL is online
 podman run -d --env-file=.env.dev --name local_library -p 8000:8000 localhost/dev-test
@@ -253,6 +258,7 @@ vim .env.example
 * [Diagrams](https://diagrams.mingrammer.com/)
     * Diagram as Code
     * architecture design
+* [djangoproject.com/docker-entrypoint.sh](https://github.com/django/djangoproject.com/blob/main/docker-entrypoint.sh)
 * [Django plugins/packages](https://djangopackages.org/)
     * [markdown](https://pypi.org/project/Markdown/)
     * [django-markdownify](https://pypi.org/project/django-markdownify/)
