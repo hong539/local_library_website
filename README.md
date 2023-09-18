@@ -89,7 +89,7 @@
         ├── test_models.py
         └── test_views.py
         ```              
-* [Django Tutorial Part 11: Deploying Django to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)    
+* [~~Django Tutorial Part 11: Deploying Django to production~~](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)    
     * [Getting your website ready to publish](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment#getting_your_website_ready_to_publish)
     * [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/)
     * deploy via docekr/podman conainter
@@ -103,6 +103,7 @@
             * podman run -d --env-file=.env.dev --name local_library -p 8000:8000 localhost/dev-test
                 * django.core.exceptions.ImproperlyConfigured: Set the DB_USER environment variable
                 * django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'x.x.x.x:8000'. You may need to add 'x.x.x.x' to ALLOWED_HOSTS.
+                    * ALLOWED_HOSTS in settings.py
 * [web_application_security](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security)
 * [Assessment: DIY Django mini blog](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:
@@ -213,31 +214,42 @@ podman rmi localhost/dev-test:latest
 
 #test docekr/podman container image in localhost when PostgreSQL is online
 podman run -d --env-file=.env.dev --name local_library -p 8000:8000 localhost/dev-test
+
+#.env.example for using and doing modification for your usecase
+vim .env.example
 ```
 
 ## Others
 
-* [The Twelve Factors](https://www.12factor.net/)
+* [CSRF (Cross-Site Request Forgery)](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)
+* Design parts
+    * [The Twelve Factors](https://www.12factor.net/)
+* Deployment parts    
+    * [PEP 3333 – Python Web Server Gateway Interface(WSGI)](https://peps.python.org/pep-3333/)
+    * [uWSGI 2.0 documentation](https://uwsgi-docs.readthedocs.io/en/latest/)
+    * [How to deploy with WSGI](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/)
+    * [gunicorn](https://github.com/benoitc/gunicorn)
+    * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.3.x/)
+    * [Docker Registry](https://docs.docker.com/registry/)
+* Test parts
+    * [Python/load test/locust](https://docs.locust.io/en/stable/quickstart.html)
 * [restful-demo.pdf](https://github.com/TritonHo/slides/blob/master/restful-demo.pdf)
     * [RESTful API Design-tw-2.2.pdf](https://github.com/TritonHo/slides/blob/master/Taipei%202019-06%20talk/RESTful%20API%20Design-tw-2.2.pdf)
 * [flake8](https://flake8.pycqa.org/en/latest/)
 * [pandas](https://github.com/pandas-dev/pandas)
-* [gunicorn](https://github.com/benoitc/gunicorn)
 * [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 * [distrochooser](https://distrochooser.de/)
     * [Dockerfile example from distrochooser](https://github.com/distrochooser/distrochooser/blob/master/backend/Dockerfile)
     * Vue
     * Django
-* [How to deploy with WSGI](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/)
-* [PEP 3333 – Python Web Server Gateway Interface(WSGI)](https://peps.python.org/pep-3333/)
-* [Python/load test/locust](https://docs.locust.io/en/stable/quickstart.html)
 * [Scaffold_(programming)](https://en.wikipedia.org/wiki/Scaffold_(programming))
+* javascript part
+    * [nodejs](https://nodejs.org/en)
+    * [expressjs](https://expressjs.com/)
+    * [react](https://react.dev/)
+    * [Vue.js](https://vuejs.org/)
+    * [tailwindcss](https://tailwindcss.com/)
 * [django-roadmap](https://github.com/HHHMHA/django-roadmap)
-* [nodejs](https://nodejs.org/en)
-* [expressjs](https://expressjs.com/)
-* [react](https://react.dev/)
-* [Vue.js](https://vuejs.org/)
-* [tailwindcss](https://tailwindcss.com/)
 * [Diagrams](https://diagrams.mingrammer.com/)
     * Diagram as Code
     * architecture design
@@ -245,5 +257,12 @@ podman run -d --env-file=.env.dev --name local_library -p 8000:8000 localhost/de
     * [markdown](https://pypi.org/project/Markdown/)
     * [django-markdownify](https://pypi.org/project/django-markdownify/)
     * [django-environ](https://github.com/joke2k/django-environ)
+* [uploadserver](https://pypi.org/project/uploadserver/)
 * [Flask](https://flask.palletsprojects.com/en/2.3.x/)
 * [Django REST framework（DRF）](https://www.django-rest-framework.org/)
+* Matrix digital rain
+    * [Implementation of a Falling Matrix](https://www.geeksforgeeks.org/implementation-falling-matrix/)
+    * [matrix-rain](https://github.com/flightcrank/matrix-rain)
+* Python with Rust part
+    * [Rust and Godot 3.2](https://hagsteel.com/posts/godot-rust/)
+    * [The Rust Programming Language](https://doc.rust-lang.org/book/)

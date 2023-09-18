@@ -10,8 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-import os # needed by code below
+import environ
+import os
 from pathlib import Path
+env = environ.Env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,12 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-kcb*6$car7az5skyz(f^aw*=*7!lf-wux^k=puvc2$euu$xk@v'
-import os
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+
+#Test for environ
+DEBUG = env('DJANGO_DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -78,29 +82,7 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#old one
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-#for dev in localhost
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "OPTIONS": {
-#             "service": "my_service",
-#             "passfile": ".my_pgpass",
-#         },
-#     }
-# }
-
 #for read env from OS
-import environ
-env = environ.Env()
-env.read_env()
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
