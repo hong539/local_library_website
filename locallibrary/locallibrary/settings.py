@@ -12,30 +12,29 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import environ
 import os
-from pathlib import Path
+# from pathlib import Path
 
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
+env = environ.Env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-print(BASE_DIR)
 # Take environment variables from .env file
-environ.Env.read_env(os.path.join(BASE_DIR, '.env.dev'))
+env.read_env(os.path.join(BASE_DIR, '.env.dev'))
 
+# print(env('SECRET_KEY'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
+# Test read env with django-environ
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # False if not in os.environ because of casting above
+# Test read env with django-environ
 DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
@@ -99,7 +98,7 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 #     }
 # }
 
-#for read env from OS
+#Test read env with django-environ
 DATABASES = {
     "default": env.db(),
 }

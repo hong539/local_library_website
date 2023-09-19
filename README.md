@@ -26,7 +26,14 @@
 
 ## To-do-list/troubleshooting/guides/tips...etc
 
+* Container part
+    * [why-it-is-recommended-to-run-only-one-process-in-a-container](https://devops.stackexchange.com/questions/447/why-it-is-recommended-to-run-only-one-process-in-a-container)
+    * [containers-single-or-multiple-processes](https://www.tutorialworks.com/containers-single-or-multiple-processes/)
 * Update locallibrary/settings.py for reading env eaisly from file or runtime?
+    * [django-environ](https://github.com/joke2k/django-environ)
+        * [Path issues with read_env since 11.0+](https://github.com/joke2k/django-environ/issues/497)
+            * rollback to version 0.10.0 ?
+    * yaml loader
     * [os.path](https://docs.python.org/3.8/library/os.path.html)
     * [settings tips for Django](https://github.com/django/djangoproject.com/tree/main/djangoproject/settings)
     * [Configuring Django Settings: Best Practices](https://djangostars.com/blog/configuring-django-settings-best-practices/)
@@ -157,8 +164,14 @@ sudo systemctl status postgresql.service
 poetry shell
 
 #add packages
+#src: https://python-poetry.org/docs/cli/#add
 poetry add django
-poetry add diagrams
+poetry add diagrams -G dev
+poetry add django-environ==0.10.0 -G dev
+
+#remove packages
+poetry remove diagrams
+poetry remove django-environ
 
 #for help
 python3 manage.py help
