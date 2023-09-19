@@ -121,11 +121,14 @@
     * [Getting your website ready to publish](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment#getting_your_website_ready_to_publish)
     * [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/)
     * deploy via docekr/podman conainter
+        * [Publish Container Images to Docker Hub / Image registry with Podman](https://computingforgeeks.com/how-to-publish-docker-image-to-docker-hub-with-podman/)
+        * [Use an access token](https://docs.docker.com/docker-hub/access-tokens/#use-an-access-token)
+        * [How to manage Linux container registries](https://www.redhat.com/sysadmin/manage-container-registries)
         * [How To Deploy a Scalable and Secure Django Application with Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-scalable-and-secure-django-application-with-kubernetes)
         * [How to Build a Django and Gunicorn Application with Docker](https://www.digitalocean.com/community/tutorials/how-to-build-a-django-and-gunicorn-application-with-docker)
         * Dockerfile part for build docker images with this Django project via "podman build"
             * Update/Modify Dockerfile.dev and Dockerfile.prod
-            * [--no-cache](https://github.com/containers/podman-compose/issues/205)
+            * [--no-cache](https://github.com/containers/podman-compose/issues/205)            
             * [production-dockerfile](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/#production-dockerfile)
             * [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
             * [What is the use of PYTHONUNBUFFERED in docker file?](https://stackoverflow.com/questions/59812009/what-is-the-use-of-pythonunbuffered-in-docker-file)
