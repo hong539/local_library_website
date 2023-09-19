@@ -122,6 +122,7 @@
     * [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/)
     * deploy via docekr/podman conainter
         * Dockerfile part for build docker images with this Django project via "podman build"
+            * Update/Modify Dockerfile.dev and Dockerfile.prod
             * [--no-cache](https://github.com/containers/podman-compose/issues/205)
             * [production-dockerfile](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/#production-dockerfile)
             * [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
@@ -133,19 +134,19 @@
                 * django.core.exceptions.ImproperlyConfigured: Set the DB_USER environment variable
                 * django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'x.x.x.x:8000'. You may need to add 'x.x.x.x' to ALLOWED_HOSTS.
                     * ALLOWED_HOSTS in settings.py
-    * Container part
-        * [why-it-is-recommended-to-run-only-one-process-in-a-container](https://devops.stackexchange.com/questions/447/why-it-is-recommended-to-run-only-one-process-in-a-container)
-        * [containers-single-or-multiple-processes](https://www.tutorialworks.com/containers-single-or-multiple-processes/)
-    * Update locallibrary/settings.py for reading env eaisly from file or runtime?
-        * [django-environ](https://github.com/joke2k/django-environ)
-            * [Path issues with read_env since 11.0+](https://github.com/joke2k/django-environ/issues/497)
-                * ~~rollback to version 0.10.0~~
-                * Setting Up Right PATH for BASE_DIR
-        * Maybe yaml loader 
-        * [os.path](https://docs.python.org/3.8/library/os.path.html)
-        * [correspondence-to-tools-in-the-os-module](https://docs.python.org/3.8/library/pathlib.html#correspondence-to-tools-in-the-os-module)
-        * [settings tips for Django](https://github.com/django/djangoproject.com/tree/main/djangoproject/settings)
-        * [Configuring Django Settings: Best Practices](https://djangostars.com/blog/configuring-django-settings-best-practices/)
+        * Container part
+            * [why-it-is-recommended-to-run-only-one-process-in-a-container](https://devops.stackexchange.com/questions/447/why-it-is-recommended-to-run-only-one-process-in-a-container)
+            * [containers-single-or-multiple-processes](https://www.tutorialworks.com/containers-single-or-multiple-processes/)
+        * Update locallibrary/settings.py for reading env eaisly from file or runtime?
+            * [django-environ](https://github.com/joke2k/django-environ)
+                * [Path issues with read_env since 11.0+](https://github.com/joke2k/django-environ/issues/497)
+                    * ~~rollback to version 0.10.0~~
+                    * Setting Up Right PATH for BASE_DIR
+            * Maybe yaml loader 
+            * [os.path](https://docs.python.org/3.8/library/os.path.html)
+            * [correspondence-to-tools-in-the-os-module](https://docs.python.org/3.8/library/pathlib.html#correspondence-to-tools-in-the-os-module)
+            * [settings tips for Django](https://github.com/django/djangoproject.com/tree/main/djangoproject/settings)
+            * [Configuring Django Settings: Best Practices](https://djangostars.com/blog/configuring-django-settings-best-practices/)
 * [web_application_security](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security)
 * [Assessment: DIY Django mini blog](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
 

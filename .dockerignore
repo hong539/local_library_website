@@ -10,6 +10,7 @@ locallibrary/.my_pgpass
 locallibrary/.my_pgpass_dev
 locallibrary/.pg_service.conf
 locallibrary/.pg_service.conf_dev
+locallibrary/init_scripts
 /locallibrary/catalog/backup_tests.py
 /locallibrary/catalog/migrations
 /locallibrary/catalog/__pycache__
