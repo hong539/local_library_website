@@ -127,8 +127,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+!.env.example
 .env.dev
-!.env.test
+.env.test
 
 #ignore personal PostgreSQL login info
 /locallibrary/.my_pgpass_dev

@@ -32,9 +32,11 @@
 * Update locallibrary/settings.py for reading env eaisly from file or runtime?
     * [django-environ](https://github.com/joke2k/django-environ)
         * [Path issues with read_env since 11.0+](https://github.com/joke2k/django-environ/issues/497)
-            * rollback to version 0.10.0 ?
-    * yaml loader
+            * ~~rollback to version 0.10.0~~
+            * Setting Up Right PATH for BASE_DIR
+    * Maybe yaml loader 
     * [os.path](https://docs.python.org/3.8/library/os.path.html)
+    * [correspondence-to-tools-in-the-os-module](https://docs.python.org/3.8/library/pathlib.html#correspondence-to-tools-in-the-os-module)
     * [settings tips for Django](https://github.com/django/djangoproject.com/tree/main/djangoproject/settings)
     * [Configuring Django Settings: Best Practices](https://djangostars.com/blog/configuring-django-settings-best-practices/)
 * Relational Database Management System (RDBMS) and Object Relational Mapping (ORM) part:

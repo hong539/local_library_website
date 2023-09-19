@@ -12,16 +12,26 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import environ
 import os
-# from pathlib import Path
+from pathlib import Path
 
 env = environ.Env()
 
+# env = environ.Env(
+#     DEBUG=(bool, False),
+#     SECRET_KEY=(str, 'test1234'),    
+# )
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Becareful to assign the right PATH for your Django settings
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Check point to see where is "BASE_DIR"
+# print(BASE_DIR)
 
 # Take environment variables from .env file
 env.read_env(os.path.join(BASE_DIR, '.env.test'))
+
+# env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # print(env('SECRET_KEY'))
 # Quick-start development settings - unsuitable for production
@@ -100,7 +110,7 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 
 #Test read env with django-environ
 DATABASES = {
-    "default": env.db(),
+    "default": env.db("DATABASE_URL"),
 }
 
 # Password validation
