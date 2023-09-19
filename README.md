@@ -121,6 +121,8 @@
     * [Getting your website ready to publish](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment#getting_your_website_ready_to_publish)
     * [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/)
     * deploy via docekr/podman conainter
+        * [How To Deploy a Scalable and Secure Django Application with Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-scalable-and-secure-django-application-with-kubernetes)
+        * [How to Build a Django and Gunicorn Application with Docker](https://www.digitalocean.com/community/tutorials/how-to-build-a-django-and-gunicorn-application-with-docker)
         * Dockerfile part for build docker images with this Django project via "podman build"
             * Update/Modify Dockerfile.dev and Dockerfile.prod
             * [--no-cache](https://github.com/containers/podman-compose/issues/205)
