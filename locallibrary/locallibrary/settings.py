@@ -21,7 +21,7 @@ env = environ.Env()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Take environment variables from .env file
-env.read_env(os.path.join(BASE_DIR, '.env.dev'))
+env.read_env(os.path.join(BASE_DIR, '.env.test'))
 
 # print(env('SECRET_KEY'))
 # Quick-start development settings - unsuitable for production
