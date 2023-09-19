@@ -172,7 +172,7 @@ poetry shell
 #src: https://python-poetry.org/docs/cli/#add
 poetry add django
 poetry add diagrams -G dev
-poetry add django-environ==0.10.0 -G dev
+poetry add django-environ==0.10.0
 
 #remove packages
 poetry remove diagrams
@@ -228,7 +228,9 @@ poetry export -f requirements.txt --output requirements.txt --without-hashes
 #deploy check
 python3 manage.py check --deploy
 
-#podman operations
+#podman comon operations
+#login container registry such docker hub
+podman login docker.io
 podman images
 podman container list --all
 podman container rm local_library
@@ -236,10 +238,16 @@ podman rmi localhost/dev-test:latest
 
 #docker/podman build container image
 #docker build -t dev-test -f Dockerfile.dev
-podman build --no-cache -t dev-test -f Dockerfile.dev
+podman build --no-cache -t local_library_website/dev-test -f Dockerfile.dev
+podman build -t docker.io/focal1119/local_library_website:dev -f Dockerfile.dev
 
 #test docekr/podman container image in localhost when PostgreSQL is online
-podman run -d --env-file=.env.dev --name local_library -p 8000:8000 localhost/dev-test
+podman run -d --env-file=.env --name local_library -p 8000:8000 localhost/dev-test
+
+#push
+# docker push docker.io/focal1119/local_library_website:tagname
+docker push docker.io/focal1119/local_library_website:dev
+podman push docker.io/focal1119/local_library_website:dev
 
 #.env.example for using and doing modification for your usecase
 vim .env.example
