@@ -1,6 +1,10 @@
 /architecture
 /resources
 /misc
+locallibrary/.env
+locallibrary/.env.dev
+locallibrary/.env.example
+locallibrary/.env.test
 locallibrary/.my_cms_dev
 locallibrary/.my_pgpass
 locallibrary/.my_pgpass_dev
