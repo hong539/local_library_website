@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: local_library-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: local_library
+  template:
+    metadata:
+      labels:
+        app: local_library
+    spec:
+      containers:
+        - name: local_library-container
+          image: your-django-app-image
+          ports:
+            - containerPort: 8000
+        - name: nginx-container
+          image: nginx
+          ports:
+            - containerPort: 80
