@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env_for_dev
+  labels:
+    app: local_library
+data:
+  DEBUG: off
+  SECRET_KEY: cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag
+  DATABASE_URL: psql://worker:justfortest0731@postgres-svc:5432/local_library
