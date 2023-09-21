@@ -1,17 +1,50 @@
-# Use an official Python runtime as a parent image
-FROM Dockerfile.dev AS builder
+#1st stage
+#pull official base image
+FROM python:3.8.18-bullseye AS builder
 
-# Set the working directory to /app
-WORKDIR /app
+#set the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions
+WORKDIR /temp
 
-# set environment variables
+#set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# Copy the current directory contents into the container at /app
+#install system dependencies
+RUN apt-get update && \
+    apt-get install -y curl
+
+#install dependencies manager poetry
+RUN curl -sSL https://install.python-poetry.org | python3 -
+ENV PATH="${PATH}:/root/.local/bin"
+RUN poetry --version
+
+#install dependencies from this Python project
+COPY poetry.lock pyproject.toml /temp
+RUN poetry export -f requirements.txt --output requirements.txt
+
+#2nd stage
+FROM python:3.8.18-slim-bullseye
+
+#set the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions
+WORKDIR /app
+
+#set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV DJANGO_DEBUG True
+ENV DB_USER test
+ENV DB_HOST host
+ENV DB_PASSWORD passwd
+ENV DB_PORT port
+ENV DB_NAME test_db
+
+#COPY Django files needed
+COPY --from=builder /temp/requirements.txt /app
 COPY /locallibrary /app
 
-# Make port 8000 available to the world outside this container
+RUN pip install -r requirements.txt
+
+#run dev server
 EXPOSE 8000
 
 # Run django app with gunicorn
