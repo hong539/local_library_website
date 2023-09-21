@@ -67,6 +67,8 @@ python3 manage.py createsuperuser
 python3 manage.py runserver
 
 #run with gunicorn
+#some test codes in misc
+gunicorn --workers=2 test_gunicorn01:app
 gunicorn --version
 
 #Warning: You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
