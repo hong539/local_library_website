@@ -2,7 +2,7 @@
 
 ## Abstract
 
-1. For Doing Django Tutorial: The Local Library website steps by steps.
+1. For Doing [Django Tutorial: The Local Library website](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django) steps by steps.    
     * [source codes](https://github.com/mdn/django-locallibrary-tutorial/tree/main)
 2. Extend and prepare My skills to find some good web-backend/devops/architecture jobs.
 3. Practice system architecture design.
