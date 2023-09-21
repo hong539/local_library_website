@@ -209,6 +209,7 @@ sqlite3 db.sqlite3 .dump > db.sql
     * [How to deploy with WSGI](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/)
     * [gunicorn](https://github.com/benoitc/gunicorn)
     * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.3.x/)
+    * [tornado](https://github.com/tornadoweb/tornado)
     * [Docker Registry](https://docs.docker.com/registry/)
 * Test parts
     * [Python/load test/locust](https://docs.locust.io/en/stable/quickstart.html)

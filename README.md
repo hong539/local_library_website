@@ -66,10 +66,16 @@ python3 manage.py createsuperuser
 #run devserver
 python3 manage.py runserver
 
+
+#check gunicorn
+gunicorn --version
 #run with gunicorn
 #some test codes in misc
 gunicorn --workers=2 test_gunicorn01:app
-gunicorn --version
+#run with django project
+#src: https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/
+gunicorn locallibrary.wsgi
+
 
 #Warning: You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
 python3 manage.py makemigrations

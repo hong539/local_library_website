@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # print(BASE_DIR)
 
 # Take environment variables from .env file
-env.read_env(os.path.join(BASE_DIR, '.env.test'))
+env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # env.read_env(os.path.join(BASE_DIR, '.env'))
 
