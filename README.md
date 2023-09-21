@@ -2,11 +2,11 @@
 
 ## To-do-list
 
-* For Doing [Django Tutorial: The Local Library website](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django) steps by steps.    
+* ~~Try RDBMS(Relational Database Management System):　SQLite, PostgreSQL~~
+* ~~For Doing [Django Tutorial: The Local Library website](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django) steps by steps.~~
     * [source codes](https://github.com/mdn/django-locallibrary-tutorial/tree/main)
-* Extend and prepare My skills to find some good web-backend/devops/architecture jobs.
+* ~~Extend and prepare My skills to find some good web-backend/devops/architecture jobs.~~
 * Practice system architecture design.
-* Try RDBMS(Relational Database Management System):　SQLite, PostgreSQL
 * Deploy methods survey
     * natively run on Linux host after activate virtual environment via "poetry shell"
         * run with django develeopment server
