@@ -139,15 +139,22 @@ podman rmi localhost/dev-test:latest
 #docker build -t dev-test -f Dockerfile.dev
 podman build --no-cache -t local_library_website/dev-test -f Dockerfile.dev
 podman build -t docker.io/focal1119/local_library_website:dev -f Dockerfile.dev
+podman build -t docker.io/focal1119/local_library_website:prod -f Dockerfile.prod
 
 #test docekr/podman container image in localhost when PostgreSQL is online
 podman run -d --env-file=.env --name local_library -p 8000:8000 localhost/dev-test
+
+#run with Dockerfile.dev
 podman run -d --env-file=.env --name local_library -p 8000:8000 docker.io/focal1119/local_library_website:dev
+
+#run with Dockerfile.prod
+podman run -d --env-file=.env --name local_library -p 8000:8000 docker.io/focal1119/local_library_website:prod
 
 #push
 # docker push docker.io/focal1119/local_library_website:tagname
 docker push docker.io/focal1119/local_library_website:dev
 podman push docker.io/focal1119/local_library_website:dev
+podman push docker.io/focal1119/local_library_website:prod
 
 #pull
 docker pull focal1119/local_library_website:dev
