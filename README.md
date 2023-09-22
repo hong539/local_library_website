@@ -12,12 +12,15 @@
     * natively run on Linux host after activate virtual environment via "poetry shell"
         * run with [django develeopment server](https://docs.djangoproject.com/en/4.2/intro/tutorial01/#the-development-server)
         * run with [gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/)
+        * run with [puff-rs](https://docs.rs/puff-rs/0.1.8/puff_rs/#puff--django)            
     * podmand run
     * k8s deploy
 * Frontend    
     * CSS work with [Tailwind CSS](https://tailwindcss.com/docs/installation)
 * Monitor and alert
     * [Sentry](https://github.com/getsentry)
+        * [Rust Development at Sentry](https://develop.sentry.dev/rust/)
+        * [self-hosted](https://develop.sentry.dev/self-hosted/)
         * [Python Error and Performance Monitoring for Django web apps](https://sentry.io/for/python/?original_referrer=https%3A%2F%2Fgithub.com%2F&platform=sentry.python.django)
         * Real-time crash reporting for your web apps, mobile apps, and games.
 
