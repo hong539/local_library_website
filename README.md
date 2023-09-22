@@ -7,12 +7,19 @@
     * [source codes](https://github.com/mdn/django-locallibrary-tutorial/tree/main)
 * ~~Extend and prepare My skills to find some good web-backend/devops/architecture jobs.~~
 * Practice system architecture design.
+    * Update architecture with diagram
 * Deploy methods survey
     * natively run on Linux host after activate virtual environment via "poetry shell"
-        * run with django develeopment server
-        * run with gunicorn
+        * run with [django develeopment server](https://docs.djangoproject.com/en/4.2/intro/tutorial01/#the-development-server)
+        * run with [gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/)
     * podmand run
     * k8s deploy
+* Frontend    
+    * CSS work with [Tailwind CSS](https://tailwindcss.com/docs/installation)
+* Monitor and alert
+    * [Sentry](https://github.com/getsentry)
+        * [Python Error and Performance Monitoring for Django web apps](https://sentry.io/for/python/?original_referrer=https%3A%2F%2Fgithub.com%2F&platform=sentry.python.django)
+        * Real-time crash reporting for your web apps, mobile apps, and games.
 
 ## Prerequisites
 
