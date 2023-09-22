@@ -102,6 +102,8 @@ python3 manage.py test catalog.tests.test_models
 python3 manage.py test catalog.tests.test_views
 python3 manage.py test catalog.tests.test_forms
 
+#deploy check
+python3 manage.py check --deploy
 
 #Starts the Python interactive interpreter
 python3 manage.py shell
@@ -125,9 +127,6 @@ poetry add diagrams --optional --extras diagrams
 poetry export -f requirements.txt --output requirements.txt
 poetry export -f requirements.txt --output requirements.txt --without-hashes
 
-#deploy check
-python3 manage.py check --deploy
-
 #podman comon operations
 #login container registry such docker hub
 podman login docker.io
@@ -144,7 +143,6 @@ podman build -t docker.io/focal1119/local_library_website:dev -f Dockerfile.dev
 #test docekr/podman container image in localhost when PostgreSQL is online
 podman run -d --env-file=.env --name local_library -p 8000:8000 localhost/dev-test
 podman run -d --env-file=.env --name local_library -p 8000:8000 docker.io/focal1119/local_library_website:dev
-
 
 #push
 # docker push docker.io/focal1119/local_library_website:tagname

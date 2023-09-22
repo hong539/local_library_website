@@ -47,7 +47,10 @@ SECRET_KEY = env('SECRET_KEY')
 # Test read env with django-environ
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = []
+if DEBUG == True:
+    ALLOWED_HOSTS = []
+else:
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
 # Application definition

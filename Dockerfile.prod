@@ -48,4 +48,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8000
 
 # Run django app with gunicorn
-CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "djangokubernetesproject.wsgi"]
+CMD ["gunicorn", "--bind", ":8000", "locallibrary.wsgi"]
