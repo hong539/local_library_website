@@ -45,10 +45,13 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # False if not in os.environ because of casting above
 # Test read env with django-environ
-DEBUG = env('DJANGO_DEBUG')
+if env('DJANGO_DEBUG') == "False":
+    DEBUG = False
+else:
+    DEBUG = True    
 
 if DEBUG == "True":
-    ALLOWED_HOSTS = []    
+    ALLOWED_HOSTS = ["*"]    
 else:
     ALLOWED_HOSTS = ["localhost", "127.0.0.1"]    
 
