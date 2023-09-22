@@ -45,13 +45,12 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # False if not in os.environ because of casting above
 # Test read env with django-environ
-DEBUG = env('DEBUG')
+DEBUG = env('DJANGO_DEBUG')
 
-if DEBUG == True:
-    ALLOWED_HOSTS = []
+if DEBUG == "True":
+    ALLOWED_HOSTS = []    
 else:
-    ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
-
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1"]    
 
 # Application definition
 
@@ -113,8 +112,19 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 
 #Test read env with django-environ
 DATABASES = {
-    "default": env.db("DATABASE_URL"),
+    "default": {
+        "ENGINE": env("DB_ENGINE"),
+        "NAME": env("DB_NAME"),
+        "USER": env("DB_USER"),
+        "PASSWORD": env("DB_PASSWORD"),
+        "HOST": env("DB_HOST"),
+        "PORT": env("DB_PORT"),
+    }
 }
+
+# DATABASES = {
+#     "default": env.db("DATABASE_URL"),
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
