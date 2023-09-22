@@ -23,6 +23,10 @@
         * [self-hosted](https://develop.sentry.dev/self-hosted/)
         * [Python Error and Performance Monitoring for Django web apps](https://sentry.io/for/python/?original_referrer=https%3A%2F%2Fgithub.com%2F&platform=sentry.python.django)
         * Real-time crash reporting for your web apps, mobile apps, and games.
+* Benchmark
+    * [Extreme HTTP Performance Tuning: 1.2M API req/s on a 4 vCPU EC2 Instance](https://talawah.io/blog/extreme-http-performance-tuning-one-point-two-million/)
+    * [Flame Graphs](https://www.brendangregg.com/flamegraphs.html)
+    * [wrk - a HTTP benchmarking tool](https://github.com/wg/wrk)
 
 ## Prerequisites
 
@@ -152,6 +156,9 @@ podman run -d --env-file=.env --name local_library -p 8000:8000 docker.io/focal1
 
 #run with Dockerfile.prod
 podman run -d --env-file=.env --name local_library -p 8000:8000 docker.io/focal1119/local_library_website:prod
+
+#check logs
+podman logs --follow local_library
 
 #push
 # docker push docker.io/focal1119/local_library_website:tagname
