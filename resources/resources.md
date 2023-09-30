@@ -181,6 +181,9 @@ sudo systemctl restart postgresql.service
 sudo -u postgres psql
 \du
 
+#Create your first database/user
+createuser --interactive
+
 #change exist USER with pwd 'new_password'
 #add password for user via commands
 sudo -u postgres psql
