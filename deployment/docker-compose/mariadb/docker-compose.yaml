@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: my_mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: your_database_name
+      MYSQL_USER: your_username
+      MYSQL_PASSWORD: your_password
+      TZ: Asia/Taipei
+      MYSQL_INITDB_ARGS: "--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_conf:/etc/mysql/conf.d
+      - mariadb_log:/var/log/mysql
+      - mariadb_data:/var/lib/mysql
+
+volumes:
+  mariadb_conf:
+    driver: local
+  mariadb_log:
+    driver: local
+  mariadb_data:
+    driver: local

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  mysql_master:
+    image: mysql:5.7
+    container_name: mysql_master
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: master_password
+      MYSQL_DATABASE: my_database
+      MYSQL_USER: my_username
+      MYSQL_PASSWORD: my_password
+    ports:
+      - "3306:3306"
+    command: --server-id=1 --log-bin=mysql-bin --binlog-do-db=my_database --binlog-format=ROW --gtid-mode=ON --enforce-gtid-consistency=ON
+
+  mariadb_slave:
+    image: mariadb:latest
+    container_name: mariadb_slave
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: slave_password
+      MYSQL_DATABASE: my_database
+      MYSQL_USER: my_username
+      MYSQL_PASSWORD: my_password
+      REPLICATION_MASTER_HOST: mysql_master
+      REPLICATION_MASTER_PORT: 3306
+      REPLICATION_USER: replica
+      REPLICATION_PASSWORD: replica_password
+      REPLICATION_SLAVE_SKIP_COUNTER: 1
+    ports:
+      - "3307:3306"
+    command: --server-id=2 --log-bin=mysql-bin --binlog-format=ROW --gtid-mode=ON --enforce-gtid-consistency=ON --skip-slave-start --replicate-do-db=my_database
